@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace, sans-serif;
+  background-color: rgb(144, 219, 144);
+  color: rgb(194, 119, 124);
+  text-align: center;
+}
+
+.strength-meter {
+  position: relative;
+  height: 2rem;
+  width: 90%;
+  border: 3px solid rgb(194, 119, 124);
+  border-radius: 1rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.strength-meter::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: calc(1% * var(--strength, 0));
+  background-color: rgb(194, 119, 124);
+  transition: width 200ms;
+}
+
+.password {
+  margin-top: 1rem;
+  width: 90%;
+  padding: 0.45rem 0.75rem;
+  background-color: rgb(194, 119, 124);
+  color: #fff;
+  border: 1px solid rgb(194, 119, 124);
+  outline: none;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.password:focus {
+  border: 3px solid;
+  border-color: rgb(179, 93, 99);
+  border-radius: 5px;
+}
+
+.reasons > * {
+  margin-top: 0.5rem;
+  color: rgb(194, 119, 124);
+}
